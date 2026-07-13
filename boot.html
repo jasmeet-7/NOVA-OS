@@ -1,48 +1,41 @@
-// ==========================
-// NOVA OS
-// Boot Sequence
-// Powered by FlowPilott
-// ==========================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA Boot</title>
 
-document.addEventListener("DOMContentLoaded", () => {
+    <link rel="stylesheet" href="css/style.css">
 
-    const progressBar = document.getElementById("progressBar");
-    const progressText = document.getElementById("progressText");
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    const steps = [
-        "Starting NOVA...",
-        "Loading Core...",
-        "Loading Memory...",
-        "Initializing Security...",
-        "Preparing Interface...",
-        "System Ready..."
-    ];
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
 
-    let progress = 0;
-    let step = 0;
+<body>
 
-    const boot = setInterval(() => {
+<div class="background"></div>
 
-        progress += 20;
+<main class="hero">
 
-        progressBar.style.width = progress + "%";
+    <div class="glass-card">
 
-        progressText.textContent = steps[step];
+        <h1>NOVA</h1>
 
-        step++;
+        <h2>INITIALIZING...</h2>
 
-        if (progress >= 100) {
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
 
-            clearInterval(boot);
+        <p id="progressText">Starting NOVA...</p>
 
-            setTimeout(() => {
+    </div>
 
-                window.location.href = "setup.html";
+</main>
 
-            }, 1200);
+<script src="js/boot.js"></script>
 
-        }
-
-    }, 800);
-
-});
+</body>
+</html>
