@@ -186,3 +186,30 @@ margin-top:15px;
 color:#9fd7ff;
 
 }
+
+input{
+    width:100%;
+    padding:15px;
+    margin:20px 0;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    background:rgba(255,255,255,.1);
+    color:white;
+    font-size:16px;
+}
+
+input::placeholder{
+    color:#b8d6ff;
+}
+
+#continueButton{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(90deg,#00b4ff,#6b5cff);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
