@@ -125,3 +125,64 @@ h2{
     text-align:center;
     min-height:24px;
 }
+
+/* ===== NOVA BOOT V2 ===== */
+
+.ai-core{
+    position:fixed;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    background:radial-gradient(circle,#00b4ff55,#00000000);
+    filter:blur(20px);
+    animation:pulseCore 2s infinite ease-in-out;
+    z-index:-1;
+}
+
+@keyframes pulseCore{
+
+0%{
+transform:translate(-50%,-50%) scale(.9);
+opacity:.5;
+}
+
+50%{
+transform:translate(-50%,-50%) scale(1.1);
+opacity:1;
+}
+
+100%{
+transform:translate(-50%,-50%) scale(.9);
+opacity:.5;
+}
+
+}
+
+.boot-card{
+text-align:center;
+}
+
+.boot-subtitle{
+letter-spacing:3px;
+color:#8dd8ff;
+margin-bottom:30px;
+}
+
+#progressPercent{
+
+font-family:'Orbitron',sans-serif;
+font-size:26px;
+margin-top:18px;
+color:white;
+
+}
+
+#progressText{
+
+margin-top:15px;
+color:#9fd7ff;
+
+}
